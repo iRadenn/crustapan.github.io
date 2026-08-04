@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@400;500;600&display=swap');
+
+/* --- RESET GLOBAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #4e5f4a;
+    color: #f5f2ec;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: #3e523a;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-logo h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: #f5f2ec;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.navbar-menu a:hover {
+    opacity: 0.8;
+}
+
+/* --- SECCIÓN INICIO --- */
+#inicio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    position: relative;
+}
+
+#inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#inicio h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- INDICADOR DE SCROLL --- */
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.scroll h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 2px 0;
+    font-size: 0.95rem;
+}
+
+.scroll i {
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+/* --- SECCIÓN CUIDADOS E IMÁGENES --- */
+.cuidados {
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.galeria-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.galeria-imagenes img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cuidados p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    max-width: 750px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #f5f2ec;
+}
+
+.cuidados h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- LISTA --- */
+.cuidados ol {
+    list-style: none;
+    counter-reset: pasito;
+    background-color: #3e523a;
+    max-width: 750px;
+    width: 100%;
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.cuidados ol li {
+    counter-increment: pasito;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.cuidados ol li::before {
+    content: counter(pasito);
+    background-color: #4e5f4a;
+    color: #f5f2ec;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #3e523a;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #f5f2ec;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono de Instagram y el texto */
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+footer i {
+    font-size: 1.2rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .galeria-imagenes {
+        gap: 30px;
+    }
+
+    .galeria-imagenes img {
+        max-width: 300px; 
+    }
+
+    #inicio h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    #inicio h1 {
+        font-size: 1.8rem;
+    }
+
+    #inicio h2 {
+        font-size: 1.2rem;
+    }
+
+    #inicio p {
+        font-size: 0.95rem;
+    }
+
+    .cuidados {
+        padding: 60px 15px;
+        gap: 30px;
+    }
+
+    .galeria-imagenes {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .galeria-imagenes img {
+        max-width: 85%;
+        border-width: 4px;
+    }
+
+    .cuidados p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cuidados ol {
+        padding: 25px 20px;
+    }
+
+    .cuidados ol li {
+        font-size: 0.95rem;
+        gap: 12px;
+    }
+
+    .cuidados ol li::before {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    footer p, 
+    footer a {
+        font-size: 0.9rem;
+    }
+}
