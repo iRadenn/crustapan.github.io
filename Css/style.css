@@ -242,7 +242,7 @@ footer a {
     font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el ícono de Instagram y el texto */
+    gap: 8px;
     transition: opacity 0.2s ease;
 }
 
