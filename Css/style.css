@@ -296,13 +296,22 @@ footer i {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .scroll {
-        position: static;
+        position: relative;   /* Permite que fluya naturalmente al fondo */
+        bottom: auto;
+        left: auto;
         transform: none;
-        margin-top: 30px;
+        margin-top: 15px;     /* Margen de seguridad con el elemento superior */
     }
 
+    .scroll h3 {
+        font-size: 0.85rem;   /* Tamaño sutil para evitar que ocupe demasiado alto */
+    }
+
+    .scroll i {
+        font-size: 1.1rem;
+    }
     .navbar {
         padding: 0 15px;
         gap: 20px;
@@ -368,6 +377,12 @@ footer i {
 
     #inicio,
     .cuidados {
-        padding-bottom: 30px;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribuye el espacio para empujar el scroll abajo */
+        align-items: center;
+        padding-top: 80px;    /* Espacio justo respecto a la navbar */
+        padding-bottom: 20px; /* Margen inferior para que no quede pegado al borde físico */
     }
 }
