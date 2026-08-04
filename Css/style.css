@@ -64,13 +64,15 @@ body {
 
 /* --- SECCIÓN INICIO --- */
 #inicio {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Cambiamos 'center' por 'flex-start' para controlar la distancia superior con el padding */
+    justify-content: flex-start; 
     align-items: center;
     text-align: center;
-    padding: 80px 20px 60px 20px;
+    /* 60px de la navbar + 30px de espacio libre = 90px superior constante */
+    padding: 90px 20px 40px 20px; 
     position: relative;
 }
 
@@ -118,11 +120,11 @@ body {
     background-color: #0f2509;
 }
 
-.inicio-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+.inicio-logo img {
+    max-width: 200px; /* Cambiado de 450px a 200px */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .inicio-logo img {
@@ -159,14 +161,16 @@ body {
 
 /* --- SECCIÓN CUIDADOS E IMÁGENES --- */
 .cuidados {
-    padding: 100px 20px;
-    text-align: center;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    gap: 40px;
+    text-align: center;
+    /* Usamos EXACTAMENTE la misma distancia de arriba */
+    padding: 90px 20px 60px 20px; 
+    gap: 30px;
 }
-
 .galeria-imagenes {
     display: flex;
     justify-content: center;
@@ -293,6 +297,12 @@ footer i {
 }
 
 @media (max-width: 768px) {
+    .scroll {
+        position: static;
+        transform: none;
+        margin-top: 30px;
+    }
+
     .navbar {
         padding: 0 15px;
         gap: 20px;
@@ -311,7 +321,7 @@ footer i {
     }
 
     .cuidados {
-        padding: 60px 15px;
+        padding: 70px 15px 40px 15px; /* Reducimos a un punto medio en celulares */
         gap: 30px;
     }
 
@@ -354,5 +364,10 @@ footer i {
     footer p, 
     footer a {
         font-size: 0.9rem;
+    }
+
+    #inicio,
+    .cuidados {
+        padding-bottom: 30px;
     }
 }
