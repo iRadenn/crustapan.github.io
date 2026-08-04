@@ -95,6 +95,29 @@ body {
     margin-bottom: 20px;
 }
 
+#inicio a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    max-width: 120px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color:#f5f2ec;
+    width: 100%;
+    padding: 12px;
+    background-color: #3e523a;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#inicio a:hover {
+    background-color: #0f2509;
+}
+
 .inicio-logo {
     display: flex;
     justify-content: center;
